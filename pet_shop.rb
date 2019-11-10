@@ -1,9 +1,9 @@
 def pet_shop_name(shop_name)
-  shop_name[:name]
+  return shop_name[:name]
 end
 
 def total_cash(shop_name)
-  shop_name[:admin][:total_cash]
+  return shop_name[:admin][:total_cash]
 end
 
 def add_or_remove_cash(shop, amount)
@@ -11,7 +11,7 @@ def add_or_remove_cash(shop, amount)
 end
 
 def pets_sold(sold_amount)
-  sold_amount[:admin][:pets_sold]
+  return sold_amount[:admin][:pets_sold]
 end
 
 def increase_pets_sold(pets_sold, amount)
@@ -52,9 +52,13 @@ def remove_pet_by_name(pet_shop, name)
 end
 
 def add_pet_to_stock(pet_shop, new_pet)
-  pet_shop[:pets].push(new_pet)
+  return pet_shop[:pets].push(new_pet)
 end
 
 def customer_cash(cust_cash)
-  cust_cash[:cash]
+  return cust_cash[:cash]
+end
+
+def remove_customer_cash(customer, deduction)
+  return customer[:cash] -= deduction
 end

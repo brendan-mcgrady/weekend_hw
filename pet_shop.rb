@@ -62,3 +62,7 @@ end
 def remove_customer_cash(customer, deduction)
   return customer[:cash] -= deduction
 end
+
+def customer_pet_count(pet_count)
+  return pet_count[:pets].count()
+end

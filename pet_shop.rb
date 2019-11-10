@@ -14,3 +14,8 @@ end
 def pets_sold(sold_amount)
   sold_amount[:admin][:pets_sold]
 end
+
+def increase_pets_sold(pets_sold, amount)
+  sold_num = pets_sold[:admin][:pets_sold]
+  pets_sold[:admin][:pets_sold] = sold_num + amount
+end

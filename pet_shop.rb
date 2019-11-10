@@ -22,13 +22,22 @@ def stock_count(stock_total)
   return stock_total[:pets].count()
 end
 
-# def pets_by_breed(shop, breed)
-#
-#     for breed_name in shop[:pets]
-#       if breed[:pets] == breed_name
-#         return breed.to_i()
-#       else
-#         return false
-#       end
-#     end
-# end
+# Struggle zone
+
+def pets_by_breed(pet_shop, breed)
+  breeds = []
+  for pet in pet_shop[:pets]
+    if pet[:breed] == breed
+      breeds.push(pet)
+    end
+  end
+  breeds
+end
+
+def find_pet_by_name(pet_shop, name)
+  for pet in pet_shop[:pets]
+    if pet[:name] == name
+      return pet
+    end
+  end
+end
